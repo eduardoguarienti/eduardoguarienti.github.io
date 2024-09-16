@@ -4,8 +4,7 @@ title: 'Python: EDA e Regressão'
 description: Análise do impacto das mudanças climáticas na agricultura por meio de um modelo de Regressão Linear.
 date: 2024-09-15 12:38 -0300
 image:
-  path: "https://www.kaggleusercontent.com/kf/195966573/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..PbTr1Q_WqN2AKQRNx0tamQ.gK5BL7D66a5RKcNGN3xZsd_lulIYsWJGs9yIwnlIIc5rlNpsNSrcfa_hz2E9EW_SbaYReQUKpD66iD0Nph6NOgQJCw4XRVoOtocD3PdARZlTJUDa1kiMN4t3tDabzd2jEfl6Yx0EkKYYJ5ONJz8EhxgjQtydQwid0SeDaP8Nz5rEK6gmg2kRReYI2ukuyNFFZP89oYzbarTnkCFvw_lF1X5qB8pt_WfESpQF7VbWba2xS5QS48G3xeD4Of5BKsMSZxAzB1hzfjMKjkUfZNwVsCjF4XGEGNC1vMgnNeVE-KfmDgslrWRYTv1dlrTpU_saB035XBuk3LGEq_tb037S--fOfhiZczi9DjM6cJ-FDkdVkC-b4rqb4jaHENlEcTIzOSIA2ZssrNRT6N7d1JssWimptRyELmHDJ1noTNXHtno2NqgCqzom7wC5hlivVy_BEQLJ9S0gPipc8bC2_UEt5LOTyascfoRVyT1FaHJRD6ydvWXKgtGBA0NYQ0AL90sWXdKXrwhIBiNCyrHva5JOh48bSE5Z0Dyxsb5E9gM9PBr0oDAtCoyvKyFVxRz_cW5tbERd4edz6pT3PnlSJ3rL11foXrw11fnPH4taoXa4oSl0NkJ8muS3ju946aWmiKKhEB5buTs5UyY1W4mJhnc2fzIQn7CY34iOW9_hPGyxCnTuhU7vKA7ZIfkL1qDQtCxY.66540WmO5Pchq5LKp314ZA/__results___files/__results___35_1.png"
-  alt: "Relação encontrada entre Eventos Climáticos Extremos e Número de Estratégias de Adaptação"
+  path: "https://github.com/eduardoguarienti/eduardoguarienti.github.io/blob/main/assets/img2_proj.png?raw=true"
 math: true
 permalink: /posts/projeto_python
 ---
@@ -78,7 +77,9 @@ O projeto completo está disponível em [Kaggle - Quantifying Climate Resilience
   axes[1,1].set_xlabel('Crop Productivity (ton/ha)')
   axes[1,1].set_ylabel('Count')
   ```
-![Desktop View](https://www.kaggleusercontent.com/kf/195966573/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..PbTr1Q_WqN2AKQRNx0tamQ.gK5BL7D66a5RKcNGN3xZsd_lulIYsWJGs9yIwnlIIc5rlNpsNSrcfa_hz2E9EW_SbaYReQUKpD66iD0Nph6NOgQJCw4XRVoOtocD3PdARZlTJUDa1kiMN4t3tDabzd2jEfl6Yx0EkKYYJ5ONJz8EhxgjQtydQwid0SeDaP8Nz5rEK6gmg2kRReYI2ukuyNFFZP89oYzbarTnkCFvw_lF1X5qB8pt_WfESpQF7VbWba2xS5QS48G3xeD4Of5BKsMSZxAzB1hzfjMKjkUfZNwVsCjF4XGEGNC1vMgnNeVE-KfmDgslrWRYTv1dlrTpU_saB035XBuk3LGEq_tb037S--fOfhiZczi9DjM6cJ-FDkdVkC-b4rqb4jaHENlEcTIzOSIA2ZssrNRT6N7d1JssWimptRyELmHDJ1noTNXHtno2NqgCqzom7wC5hlivVy_BEQLJ9S0gPipc8bC2_UEt5LOTyascfoRVyT1FaHJRD6ydvWXKgtGBA0NYQ0AL90sWXdKXrwhIBiNCyrHva5JOh48bSE5Z0Dyxsb5E9gM9PBr0oDAtCoyvKyFVxRz_cW5tbERd4edz6pT3PnlSJ3rL11foXrw11fnPH4taoXa4oSl0NkJ8muS3ju946aWmiKKhEB5buTs5UyY1W4mJhnc2fzIQn7CY34iOW9_hPGyxCnTuhU7vKA7ZIfkL1qDQtCxY.66540WmO5Pchq5LKp314ZA/__results___files/__results___19_1.png){: width="600" height="600" }
+![Desktop View](https://github.com/eduardoguarienti/eduardoguarienti.github.io/blob/main/assets/img1_proj.png?raw=true){: width="600" height="600" }
+
+
 
 - Análise de correlações com `sns.heatmap`:
   ```python
@@ -144,7 +145,7 @@ Notes:
 strong multicollinearity or other numerical problems.
 ```
 
-![Desktop View](https://www.kaggleusercontent.com/kf/195966573/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..PbTr1Q_WqN2AKQRNx0tamQ.gK5BL7D66a5RKcNGN3xZsd_lulIYsWJGs9yIwnlIIc5rlNpsNSrcfa_hz2E9EW_SbaYReQUKpD66iD0Nph6NOgQJCw4XRVoOtocD3PdARZlTJUDa1kiMN4t3tDabzd2jEfl6Yx0EkKYYJ5ONJz8EhxgjQtydQwid0SeDaP8Nz5rEK6gmg2kRReYI2ukuyNFFZP89oYzbarTnkCFvw_lF1X5qB8pt_WfESpQF7VbWba2xS5QS48G3xeD4Of5BKsMSZxAzB1hzfjMKjkUfZNwVsCjF4XGEGNC1vMgnNeVE-KfmDgslrWRYTv1dlrTpU_saB035XBuk3LGEq_tb037S--fOfhiZczi9DjM6cJ-FDkdVkC-b4rqb4jaHENlEcTIzOSIA2ZssrNRT6N7d1JssWimptRyELmHDJ1noTNXHtno2NqgCqzom7wC5hlivVy_BEQLJ9S0gPipc8bC2_UEt5LOTyascfoRVyT1FaHJRD6ydvWXKgtGBA0NYQ0AL90sWXdKXrwhIBiNCyrHva5JOh48bSE5Z0Dyxsb5E9gM9PBr0oDAtCoyvKyFVxRz_cW5tbERd4edz6pT3PnlSJ3rL11foXrw11fnPH4taoXa4oSl0NkJ8muS3ju946aWmiKKhEB5buTs5UyY1W4mJhnc2fzIQn7CY34iOW9_hPGyxCnTuhU7vKA7ZIfkL1qDQtCxY.66540WmO5Pchq5LKp314ZA/__results___files/__results___35_1.png){: width="600" height="600" }
+![Desktop View](https://github.com/eduardoguarienti/eduardoguarienti.github.io/blob/main/assets/img2_proj.png?raw=true){: width="600" height="600" }
 
 - Análise da distrbuição dos resíduos da regressão linear - os resíduos precisam se assemelhar a uma distribuição normal, ilustrada pela linha vermelha:
 ```python

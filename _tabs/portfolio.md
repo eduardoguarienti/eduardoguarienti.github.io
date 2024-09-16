@@ -18,7 +18,7 @@ schemas (star e snowflake);
 criação e alteração de tabelas;
 ```
 
-- [EDA de uma loja de bicicletas no SQL](/eduardoguarienti.github.io/posts/projeto_sql)
+- [EDA de uma loja de bicicletas no SQL]({% post_url 2024-09-15-eda-de-uma-loja-de-bicicletas-no-sql %})
 - [Os tipos de dados e a estrutura sintática básica do SQL](https://medium.com/@eduardoguarienti/os-tipo-de-dados-e-a-estrutura-sint%C3%A1tica-b%C3%A1sica-do-sql-e-joins-32dcc5cae75e)
 
 
@@ -33,7 +33,7 @@ plotly, visualização de dados com foco em interatividade e storytelling;
 streamlit, criação de páginas;
 ```
 
-- [EDA e Regressão Linear](/eduardoguarienti.github.io/posts/projeto_python)
+- [Python: EDA e Regressão Linear]({% post_url 2024-09-15-python-eda-e-regressão %})
 
 <h2>Power BI</h2>
 
@@ -44,7 +44,7 @@ limpeza de dados com power query;
 uso de linguagem DAX p/ criação de colunas e medidas personalizadas;
 ```
 
-- [Dashboard de vendas no Power BI](/eduardoguarienti.github.io/posts/projeto_powerbi)
+- [Dashboard de vendas no Power BI]({% post_url 2024-09-15-report-e-eda-no-power-bi %})
   
 <iframe title="projeto_powerbi_loja" width="800" height="486" src="https://app.powerbi.com/view?r=eyJrIjoiZTYxNTU1ZmUtOGMyMy00NWYyLTk1Y2MtZjNiMTRiYjE4YWJjIiwidCI6IjBiYzA2NzRiLWZmMWEtNDVkZC05ZThiLTg5NTIwZGUzMzMxYSJ9" frameborder="0" allowFullScreen="true"></iframe>
 

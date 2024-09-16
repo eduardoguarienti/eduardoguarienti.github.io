@@ -6,8 +6,6 @@ date: 2024-09-15 11:31 -0300
 image:
   path: "https://github.com/eduardoguarienti/projeto_powerbi/blob/main/proj_powerbi1.png?raw=true"
   alt: "Página 3 do Report"
-categories: [Portfolio, Power BI]
-tags: report dax
 permalink: /posts/projeto_powerbi
 ---
 

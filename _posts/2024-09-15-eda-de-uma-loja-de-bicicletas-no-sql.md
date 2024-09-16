@@ -6,8 +6,6 @@ description: Análise Exploratória de Dados de uma base relacional do SQL com �
 image:
   path: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*6pdyiUh09Wbo0ZhA7VoC5Q.png"
   alt: "Processo de Análise Exploratória no SQL"
-categories: [Portfolio, SQL]
-tags: cte join eda case
 permalink: /posts/projeto_sql
 ---
 

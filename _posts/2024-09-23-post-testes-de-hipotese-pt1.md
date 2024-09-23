@@ -70,7 +70,7 @@ Serve para comparar a média da amostra com a média da população. Para usar o
 
 Entretanto, exceto quando o dataset em si representa a população, raramente temos o desvio padrão populacional, sendo seu uso um pouco mais restrito.
 
-Em um dataset com 1407 observações (=n), em que a média salarial (variável contínua) é igual a 6502 e o desvio padrão amostral é de 4707.95 e, assumindo por simplicidade que o desvio padrão amostral é igual ao desvio padrão populacional, se quisermos testar a hipótese nula de que o salário médio da população é de 6000 unidades a um nível de significância de 5%, fazemos o seguinte teste de hipótese:
+Em um dataset[^df] com 1407 observações (=n), em que a média salarial (variável contínua) é igual a 6502 e o desvio padrão amostral é de 4707.95 e, assumindo por simplicidade que o desvio padrão amostral é igual ao desvio padrão populacional, se quisermos testar a hipótese nula de que o salário médio da população é de 6000 unidades a um nível de significância de 5%, fazemos o seguinte teste de hipótese:
 
 
 $$ H_0 : \mu = 6000 $$
@@ -226,3 +226,4 @@ Um exercício interessante seria descobrir qual o valor limite em que não podem
     print(p_valor) #0.05
     print(estatistica_teste) #1.96
     ```
+[^df]: https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset

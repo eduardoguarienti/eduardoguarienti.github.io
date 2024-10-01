@@ -3,6 +3,15 @@ layout: page
 icon: fa-solid fa-briefcase
 order: 2
 ---
+<h2> Excel </h2>
+```
+habilidades:
+análise de dados por via de gráficos e tabelas dinâmicas
+limpeza de dados
+funções matemáticas, de data e de texto
+funções lógicas
+```
+- [EDA da Performance de Estudantes no Excel]({% post_url 2024-10-01-post-performance-estudantes-excel %})
 
 <h2>SQL</h2>
 ```
@@ -13,7 +22,7 @@ GROUP BY p/ agrupamentos em dados desagregados;
 LEFT, INNER e RIGHT JOIN;
 subqueries;
 window functions;
-primary e foreign keys e princípios de bases de dados relacionais (não redundância, 1NF, 2NF);
+primary e foreign keys e princípios de bases de dados relacionais;
 schemas (star e snowflake);
 criação e alteração de tabelas;
 ```

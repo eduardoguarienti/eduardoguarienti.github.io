@@ -4,11 +4,11 @@ title: Modelo Manual de Regressão Linear
 date: 2024-10-09 09:36 -0300
 description: Criação de funções que replicam o funcionamento de um modelo de Reg. Linear do Scikit-Learn.
 image:
-  path: "/assets/matplotlib.png"
+  path: "https://github.com/eduardoguarienti/eduardoguarienti.github.io/blob/main/assets/matplotlib.png?raw=true"
   alt: "Regressão Linear encontrada (visualização do matplotlib)"
 ---
 
-Nesse pequeno projeto procurei replicar a maneira como uma regressão linear é feita na biblioteca `scikit-learn`, criando funções para separar o conjunto de dados entre treino e teste, criar uma regressão por meio dos quadrados mínimos ordinários via `numpy`, prever valores novos e, por fim, medir a acurácia e adequação do modelo por meio de funções que calculam o erro quadrático médio e o coeficiente de determinação.
+Nesse pequeno projeto procurei replicar a maneira como uma regressão linear é feita na biblioteca `scikit-learn`, criando funções para separar o conjunto de dados entre treino e teste, criar uma regressão por meio dos quadrados mínimos ordinários via `numpy`, prever valores novos e, por fim, medir a acurácia e adequação do modelo por meio de funções que calculam o erro quadrático médio e o coeficiente de determinação. O notebook do projeto está disponível no repositório do [Github](https://github.com/eduardoguarienti/outros/tree/main).
 
 Para visualizar a regressão resultante:
 

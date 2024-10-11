@@ -43,6 +43,7 @@ streamlit, criação de páginas;
 ```
 
 - [Python: EDA e Regressão Linear]({% post_url 2024-09-15-python-eda-e-regressão %})
+- [Python: Modelo de Machine Learning de Regressão feito manualmente]({% post_url 2024-10-09-post-modelo-manual-de-regressao %})
 
 <h2>Power BI</h2>
 
@@ -53,8 +54,12 @@ limpeza de dados com power query;
 uso de linguagem DAX p/ criação de colunas e medidas personalizadas;
 ```
 
-- [Dashboard de vendas no Power BI]({% post_url 2024-09-15-report-e-eda-no-power-bi %})
+- [Report de Absenteísmo]({% post_url 2024-10-11-report-absenteismo-no-power-bi %})
+- [Dashboard de Vendas]({% post_url 2024-09-15-report-e-eda-no-power-bi %})
   
+<iframe title="report_abs" width="800" height="486" src="https://app.powerbi.com/view?r=eyJrIjoiMGFlNTM1MTYtZDdiZS00ODk4LWE3NTMtYjk5ZjE5YWY0ODVjIiwidCI6IjBiYzA2NzRiLWZmMWEtNDVkZC05ZThiLTg5NTIwZGUzMzMxYSJ9&pageName=e378dd438e83460453c1" frameborder="0" allowFullScreen="true"></iframe>
+
+
 <iframe title="projeto_powerbi_loja" width="800" height="486" src="https://app.powerbi.com/view?r=eyJrIjoiZTYxNTU1ZmUtOGMyMy00NWYyLTk1Y2MtZjNiMTRiYjE4YWJjIiwidCI6IjBiYzA2NzRiLWZmMWEtNDVkZC05ZThiLTg5NTIwZGUzMzMxYSJ9" frameborder="0" allowFullScreen="true"></iframe>
 
 <h2> Outros </h2>

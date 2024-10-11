@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Amostragem e Bootstrap
+title: Amostragem e Bootstrap/Python
 date: 2024-09-20 10:02 -0300
 math: true
 media_subpath: eduardoguarienti.github.io/assets/img/

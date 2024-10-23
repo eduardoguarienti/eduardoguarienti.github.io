@@ -2,7 +2,7 @@
 layout: post
 title: "EDA de uma loja de bicicletas no SQL"
 date: 2024-09-15 10:47 -0300
-description: Análise Exploratória de Dados de uma base relacional do SQL com ênfase em perceber as métricas de negócio.
+description: Análise exploratória de dados de uma base relacional do SQL com ênfase em perceber as métricas de negócio
 image:
   path: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*6pdyiUh09Wbo0ZhA7VoC5Q.png"
   alt: "Processo de Análise Exploratória no SQL"

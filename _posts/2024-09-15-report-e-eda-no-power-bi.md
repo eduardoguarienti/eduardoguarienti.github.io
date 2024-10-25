@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Report e EDA no Power BI
-description: Report e análise exploratória no Power BI.
+description: report e análise exploratória de vendas no Power BI
 date: 2024-09-15 11:31 -0300
 image:
   path: "https://github.com/eduardoguarienti/projeto_powerbi/blob/main/proj_powerbi1.png?raw=true"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Python: EDA e Regressão'
-description: Análise do impacto das mudanças climáticas na agricultura por meio de um modelo de Regressão Linear.
+description: Análise do impacto das mudanças climáticas na agricultura por meio de um modelo de regressão linear
 date: 2024-09-15 12:38 -0300
 image:
   path: "https://github.com/eduardoguarienti/eduardoguarienti.github.io/blob/main/assets/img2_proj.png?raw=true"

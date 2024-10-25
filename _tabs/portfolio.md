@@ -27,6 +27,7 @@ schemas (star e snowflake);
 criação e alteração de tabelas;
 ```
 
+- [Panorama dos Acidentes Evitáveis de Trânsito no Brasil]({% post_url 2024-10-23-eda-dos-acidentes-evitáveis-de-trânsito-no-brasil %})
 - [EDA de uma loja de bicicletas no SQL]({% post_url 2024-09-15-eda-de-uma-loja-de-bicicletas-no-sql %})
 - [Os tipos de dados e a estrutura sintática básica do SQL](https://medium.com/@eduardoguarienti/os-tipo-de-dados-e-a-estrutura-sint%C3%A1tica-b%C3%A1sica-do-sql-e-joins-32dcc5cae75e)
 

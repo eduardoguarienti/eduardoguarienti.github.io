@@ -2,7 +2,7 @@
 layout: post
 title: "Análise da Performance de Estudantes/Excel"
 date: 2024-10-01 11:26 -0300
-description: Análise Exploratória de Dados de um conjunto de estudantes e determinantes do desempenho.
+description: Análise exploratória de dados de um conjunto de estudantes e determinantes do desempenho
 permalink: /posts/projeto_excel
 image:
   path: "https://github.com/eduardoguarienti/projeto_excel/blob/main/rel_notas_horas_estudo.png?raw=true"

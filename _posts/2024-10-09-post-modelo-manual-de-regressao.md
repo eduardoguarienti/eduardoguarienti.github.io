@@ -2,7 +2,7 @@
 layout: post
 title: Modelo Manual de Regressão Linear/Python
 date: 2024-10-09 09:36 -0300
-description: Criação de funções que replicam o funcionamento de um modelo de Reg. Linear do Scikit-Learn.
+description: Criação de funções que replicam o funcionamento de um modelo de regressão linear do scikit-learn
 image:
   path: "https://github.com/eduardoguarienti/eduardoguarienti.github.io/blob/main/assets/matplotlib.png?raw=true"
   alt: "Regressão Linear encontrada (visualização do matplotlib)"

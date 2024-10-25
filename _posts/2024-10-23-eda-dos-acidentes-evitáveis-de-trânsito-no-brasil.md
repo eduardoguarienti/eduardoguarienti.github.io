@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EDA dos Acidentes Evitáveis de Trânsito no Brasil
+title: Panorama dos Acidentes Evitáveis de Trânsito no Brasil/SQL
 date: 2024-10-23 12:05 -0300
 permalink: /posts/projeto_transito_sql
 ---
@@ -491,30 +491,11 @@ GROUP BY
     tipo_veiculo
 ORDER BY 
     COUNT(*) DESC;
-
--- 54% em pistas simples
--- 39% em pistas duplas
--- 6% em pistas múltiplas
--- Interessante teste t para verificar diferença entre grupos:
--- Não aparenta haver influência do tipo de pista com o acidente ser evitável ou não
-SELECT
-    tipo_pista,
-    COUNT(*),
-    ROUND(
-        COUNT(*) / (SELECT COUNT(*) FROM acidentes_nao_evitaveis)::decimal, 4
-    ) AS proporcao,
-    ROUND(
-        SUM(COUNT(*)) OVER (ORDER BY COUNT(*) DESC) 
-        / (SELECT COUNT(*) FROM acidentes_nao_evitaveis)::decimal, 4
-    ) AS prop_cumulativa
-FROM 
-    acidentes_nao_evitaveis
-GROUP BY 
-    tipo_pista
-ORDER BY 
-    COUNT(*) DESC;
 ```
 
+Quanto a proporção dos tipos de veículos envolvidos nesses acidentes, os automóveis correspondem a mais da metade e, em relação aos acidentes não evitáveis, correspondem a um incremento de 7%. A proporção de veículos grandes também é menor para os acidentes evitáveis.
+
+| acidentes evitáveis |
 | tipo_veiculo         | count     | proporcao | prop_cumulativa |
 | -------------------- | --------- | --------- | --------------- |
 | Automóvel            | 1,148,493 | 0.5138    | 0.5138          |
@@ -546,6 +527,9 @@ ORDER BY
 | Motor-Casa           | 8         | 0.0000    | 1.0000          |
 | Side-car             | 5         | 0.0000    | 1.0000          |
 
+Dado que os veículos grandes têm uma inércia muito superior a carros de passeio e são mais comuns nos acidentes não evitáveis, é possível que haja mais acidentes graves nessa categoria.
+
+| acidentes não evitáveis |
 | tipo_veiculo         | num_acidentes | proporcao | prop_cumulativa |
 | -------------------- | ------------- | --------- | --------------- |
 | Automóvel            | 509,947       | 0.4497    | 0.4497          |
@@ -560,12 +544,6 @@ ORDER BY
 | Não identificado     | 12,615        | 0.0111    | 0.9713          |
 | Motoneta             | 11,371        | 0.0100    | 0.9813          |
 
-| tipo_pista   | count   | proporcao | prop_cumulativa |
-| ------------ | ------- | --------- | --------------- |
-| Simples      | 612,424 | 0.5401    | 0.5401          |
-| Dupla        | 443,730 | 0.3913    | 0.9314          |
-| Múltipla     | 77,744  | 0.0686    | 1.0000          |
-| Desconhecido | 6       | 0.0000    | 1.0000          |
 
 ```sql
 -- ranking dos estados
@@ -598,6 +576,8 @@ LIMIT
 
 ```
 
+No ranking dos estados por acidentes evitáveis, temos MG, SC e PR como os três primeiros lugares por uma boa margem. Surpreendentemente, SP, que tem a maior população do país, está em quinto lugar. Outro destaque é o ES, que tem quase a mesma quantidade que o RJ, um estado 5x maior.
+
 | localizacao  | quantidade | ranking |
 | ------------ | ---------- | ------- |
 | MG           | 136,834    | 1       |
@@ -628,6 +608,8 @@ LIMIT
 | AP           | 1,436      | 26      |
 | AM           | 1,161      | 27      |
 | Desconhecido | 6          | 28      |
+
+Todos os municípios ou são capitais de estados ou são adjacentes às capitais, com destaque para SC, com duas cidades com alto fluxo de carros próxima a capital, e ES, também com duas cidades. Portanto, os acidentes evitáveis em rodovias federais ocorrem, em grande parte, em grandes centros urbanos.
 
 | localizacao     | quantidade | ranking |
 | --------------- | ---------- | ------- |
@@ -665,6 +647,26 @@ GROUP BY
 ORDER BY 
     COUNT(*) DESC;
 
+-- 54% em pistas simples
+-- 39% em pistas duplas
+-- 6% em pistas múltiplas
+SELECT
+    tipo_pista,
+    COUNT(*),
+    ROUND(
+        COUNT(*) / (SELECT COUNT(*) FROM acidentes_nao_evitaveis)::decimal, 4
+    ) AS proporcao,
+    ROUND(
+        SUM(COUNT(*)) OVER (ORDER BY COUNT(*) DESC) 
+        / (SELECT COUNT(*) FROM acidentes_nao_evitaveis)::decimal, 4
+    ) AS prop_cumulativa
+FROM 
+    acidentes_nao_evitaveis
+GROUP BY 
+    tipo_pista
+ORDER BY 
+    COUNT(*) DESC;
+
 -- Predomínio de colisões traseiras sem vítimas
 -- Vítimas fatais correspondem a menos de 2% do total
 -- Entretanto, análise é prejudicada pois há mts valores faltantes na classificação do acidente
@@ -689,11 +691,24 @@ ORDER BY
     COUNT(*) DESC;
 ```
 
+As pistas simples são a maioria dos acidentes em ambos os subtipos de acidentes. Entretanto, pistas duplas e pistas múltiplas, que evitam o contato entre sentidos diferentes, ainda assim possuem uma boa fração da quantidade de acidentes totais.
+
+| evitáveis |
+| tipo_pista   | count   | proporcao | prop_cumulativa |
+| ------------ | ------- | --------- | --------------- |
+| Simples      | 612,424 | 0.5401    | 0.5401          |
+| Dupla        | 443,730 | 0.3913    | 0.9314          |
+| Múltipla     | 77,744  | 0.0686    | 1.0000          |
+| Desconhecido | 6       | 0.0000    | 1.0000          |
+
+| não evitáveis |
 | tipo_pista | count     | proporcao | prop_cumulativa |
 | ---------- | --------- | --------- | --------------- |
 | Simples    | 1,195,072 | 0.5346    | 0.5346          |
 | Dupla      | 859,477   | 0.3845    | 0.9191          |
 | Múltipla   | 180,950   | 0.0809    | 1.0000          |
+
+Entre os tipos de colisões que mais geram acidentes de trânsito com feridos, temos a colisão transversal - em que a colisão se dá num ângulo de 90 graus, e a colisão traseira. O tipo de colisão mais perigoso é a colisão frontal, em que a chance de ser fatal é maior que a chance de não ser fatal. Entretanto, há muitos valores faltantes, e há somente cerca de 50% dos registros totais de acidentes com a classificação de gravidade.
 
 | tipo_acidente           | classificacao_acidente | count   | proporcao | prop_cumulativa |
 | ----------------------- | ---------------------- | ------- | --------- | --------------- |
@@ -765,6 +780,8 @@ ORDER BY
 
 ```
 
+Para as pistas simples, o panorama é semelhante: as colisões tranversais e frontais são as mais perigosas. Entretanto, há também muitos dados faltantes: menos de 60% dos acidentes totais.
+
 | tipo_acidente                              | classf_acidente     | count   | proporcao | prop_cumulativa |
 | ------------------------------------------ | ------------------- | ------- | --------- | --------------- |
 | Colisão traseira                           | Sem Vítimas         | 105,498 | 0.1073    | 0.1073          |
@@ -790,6 +807,8 @@ ORDER BY
 | Colisão Transversal                        | Com Vítimas Fatais  | 3,170   | 0.0032    | 0.4997          |
 | Atropelamento de pessoa                    | Com Vítimas Fatais  | 2,422   | 0.0025    | 0.5022          |
 
+Vendo pela coluna de estado_fisico, que aparenta ter uma quantidade semelhante de valores preenchidos em relação à classificação do acidente, é possível perceber que um pouco mais de 1/4 dos passageiros saem ilesos dos acidentes de trânsito, o que é demasiadamente pouco tendo em vista que são acidentes que poderiam não ter ocorrido.
+
 | tipo_pista | tipo_acidente       | estado_fisico | quantidade | proporcao | prop_cumulativa |
 | ---------- | ------------------- | ------------- | ---------- | --------- | --------------- |
 | Simples    | Colisão traseira    | Ileso         | 300,475    | 0.1344    | 0.1344          |
@@ -804,3 +823,5 @@ ORDER BY
 | Simples    | Colisão lateral     | Ferido Leve   | 33,770     | 0.0151    | 0.4037          |
 | Simples    | Colisão frontal     | Ferido Grave  | 25,631     | 0.0115    | 0.4151          |
 | Simples    | Colisão Transversal | Ferido Grave  | 22,968     | 0.0103    | 0.4254          |
+
+Dado tanto o tamanho quanto a quantidade de registros da tabela, acredito ainda que seja possível tirar vários novos insights dessa tabela, em especial as tabelas a partir do ano de 2017, em que há registros de latitude e longitude, entre outras novas informações.
